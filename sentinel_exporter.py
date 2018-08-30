@@ -59,7 +59,6 @@ def run_exporter(redis_client, sleeptime):
         except Exception as e:
             log.exception("Error thrown while collecting metrics")
         finally:
-            import code; code.interact(local=vars())
             time.sleep(sleeptime)
 
 def collect_metrics(redis_client):
