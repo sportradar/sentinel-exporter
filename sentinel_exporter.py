@@ -9,7 +9,7 @@ parser = argparse.ArgumentParser(description="sentinel exporter for prometheus")
 parser.add_argument('-p', '--port', type=int, default=26379)
 parser.add_argument('-H', '--host', type=str, default="localhost")
 parser.add_argument('-i', '--scrape-interval-seconds', type=int, default=30)
-parser.add_argument('-m', '--metrics-port', type=int, default=9122)
+parser.add_argument('-m', '--metrics-port', type=int, default=9478)
 parser.add_argument('--debug', action="store_true")
 args = parser.parse_args()
 

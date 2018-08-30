@@ -22,5 +22,5 @@ Name | Description | Default
 -p --port | Which port sentinel is listening on | 26379
 -H --host | The host sentinel is running on | localhost
 -i --scrape-interval-seconds | How often to update the underlying metrics in seconds | 30
--m --metrics-port | The port that the metrics exporter will listen on | 9122
+-m --metrics-port | The port that the metrics exporter will listen on | 9478
 
