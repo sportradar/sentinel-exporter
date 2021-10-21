@@ -10,6 +10,7 @@ parser.add_argument('-p', '--port', type=int, default=26379)
 parser.add_argument('-H', '--host', type=str, default="localhost")
 parser.add_argument('-i', '--scrape-interval-seconds', type=int, default=30)
 parser.add_argument('-m', '--metrics-port', type=int, default=9478)
+parser.add_argument('-P', '--password', type=str, default="")
 parser.add_argument('--debug', action="store_true")
 args = parser.parse_args()
 
@@ -48,7 +49,7 @@ sentinels_current_gauge = AtomicGaugeCollector('sentinel_sentinels_current', 'Nu
 def main():
     start_http_server(args.metrics_port)
     log.info("Connecting to sentinel on %s:%s", args.host, args.port)
-    redis_client = Redis(host=args.host, port=args.port)
+    redis_client = Redis(host=args.host, port=args.port, password=args.password)
     run_exporter(redis_client, args.scrape_interval_seconds)
 
 def run_exporter(redis_client, sleeptime):
