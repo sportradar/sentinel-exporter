@@ -23,4 +23,4 @@ Name | Description | Default
 -H --host | The host sentinel is running on | localhost
 -i --scrape-interval-seconds | How often to update the underlying metrics in seconds | 30
 -m --metrics-port | The port that the metrics exporter will listen on | 9478
-
+-P --password | The password that the metrics exporter will connect in sentinle | " "
